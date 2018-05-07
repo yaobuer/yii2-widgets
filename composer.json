@@ -1,0 +1,21 @@
+{
+    "name": "sunnnnn/yii2-widgets",
+    "description": "widgets for yii2-admin/yii2-nifty or other Yii2 frames",
+    "keywords": ["yii2", "widgets"],
+    "type": "yii2-widgets",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sunnnnn",
+            "email": "mrsunnnnn@qq.com"
+        }
+    ],
+    "require": {
+		"php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "sunnnnn\\widgets\\": ""
+        }
+    }
+}
