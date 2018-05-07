@@ -63,6 +63,7 @@ class ColorPicker extends InputWidget{
             if($this->_addon === true){
                 $input = Html::tag('div', Html::activeTextInput($this->model, $this->attribute, $this->options).'<span class="input-group-addon" style="min-width:'.$this->_width.';"><i style="width:100%;"></i></span>', [
                     'class' => 'input-group colorpicker-component',
+                    'style' => 'z-index: 0;',
                     'id' => $this->options['id'].'-div'
                 ]);
             }else{
@@ -71,7 +72,8 @@ class ColorPicker extends InputWidget{
         }else{
             if($this->_addon === true){
                 $input = Html::tag('div', Html::textInput($this->name, null, $this->options).'<span class="input-group-addon" style="min-width:'.$this->_width.';"><i style="width:100%;"></i></span>', [
-                    'class' => 'input-group colorpicker-component'
+                    'class' => 'input-group colorpicker-component',
+                    'style' => 'z-index: 0;'
                 ]);
             }else{
                 $input = Html::textInput($this->name, null, $this->options);
