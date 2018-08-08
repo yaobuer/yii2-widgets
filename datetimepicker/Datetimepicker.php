@@ -110,7 +110,7 @@ class DatetimePicker extends InputWidget{
     public function renderAsset(){
         $view = $this->getView();
 
-        DatetimePickerAsset::register($view);
+        DatetimepickerAsset::register($view);
 
         if($this->_pure === true){
             $options = [];
