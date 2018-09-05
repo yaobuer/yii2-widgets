@@ -12,7 +12,8 @@ class RatingAsset extends AssetBundle{
     ];
     
     public $js = [
-        'js/star-rating.min.js'
+        'js/star-rating.min.js',
+        'js/locales/zh.js',
     ];
     
     public $depends = [

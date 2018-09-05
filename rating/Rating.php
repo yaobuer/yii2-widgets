@@ -40,7 +40,7 @@ class Rating extends InputWidget{
      * 语言
      * @var int
      */
-    public $_language = 'zh-CN';
+    public $_language = 'zh';
     /**
      * 默认星星图标
      * @var string
@@ -123,6 +123,11 @@ class Rating extends InputWidget{
 
     public function init(){
         parent::init();
+        if(in_array($this->_language, ['zh', 'zh-CN', 'zh-cn'])){
+            $this->_language = 'zh';
+        }else{
+            $this->_language = 'en';
+        }
     }
 
     public function run(){
@@ -152,6 +157,7 @@ class Rating extends InputWidget{
             $options = [];
         }else{
             $options = [
+                'language' => $this->_language,
                 'emptyStar' => $this->_emptyStar,
                 'filledStar' => $this->_filledStar,
                 'stars' => $this->_stars,
